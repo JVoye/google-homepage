@@ -1,0 +1,61 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  max-height: 100vh;
+  text-rendering: optimizeSpeed;
+  font-family: Arial, sans-serif;
+  //   line-height: 1.5;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  padding: 0.5rem 2.1rem;
+
+  & a {
+    padding: 0.5rem;
+  }
+
+  &__left {
+    display: flex;
+    font-size: 1.4rem;
+
+    & li {
+      margin-right: 1rem;
+    }
+  }
+
+  &__right {
+    display: flex;
+    font-size: 1.3rem;
+
+    & li {
+      margin-left: 1rem;
+    }
+  }
+}
