@@ -35,13 +35,14 @@ ul {
   justify-content: space-between;
   align-items: center;
   height: 60px;
-  padding: 0.5rem 2.1rem;
+  padding: 0.5rem 1.3rem 0.5rem 2.1rem;
 
   & a {
+    display: block;
     padding: 0.5rem;
   }
 
-  &__left {
+  &__left-align {
     display: flex;
     font-size: 1.4rem;
 
@@ -50,12 +51,58 @@ ul {
     }
   }
 
-  &__right {
+  &__right-align {
     display: flex;
+    align-items: center;
     font-size: 1.3rem;
 
     & li {
       margin-left: 1rem;
     }
   }
+
+  &__item {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      background-color: #f2f2f2;
+      border-radius: 50%;
+      z-index: -1;
+    }
+  }
+
+  // &__item:hover {
+  // }
+
+  &__profile {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: grey;
+  }
+}
+
+.material-icons.md-dark {
+  color: rgba(0, 0, 0, 0.54);
+}
+.material-icons.md-dark.md-inactive {
+  color: rgba(0, 0, 0, 0.26);
+}
+
+// .material-icons.md-light {
+//   color: rgba(255, 255, 255, 1);
+// }
+.material-icons.md-light.md-inactive {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.material-icons.grey {
+  color: #5f6368;
 }
