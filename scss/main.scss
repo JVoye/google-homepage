@@ -70,6 +70,7 @@ button:focus {
 
 // navigation
 .nav {
+  // position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -99,6 +100,10 @@ button:focus {
   & a {
     color: var(--color-font-dark);
     padding: 0.4rem;
+  }
+
+  &__btn {
+    position: relative;
   }
 
   &__apps {
@@ -132,6 +137,23 @@ button:focus {
       box-shadow: 0 0 0 3pt var(--color-light-gray);
     }
   }
+
+  &__menu {
+    display: none;
+    position: absolute;
+    // right: 0;
+    // top: 30px;
+    padding: 0.8rem;
+    border: 1px solid red;
+  }
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
 }
 
 // main
@@ -158,6 +180,11 @@ button:focus {
 
     display: flex;
     justify-content: space-between;
+
+    &:hover,
+    &:focus-within {
+      box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28);
+    }
 
     & input {
       font-size: var(--font-base);
